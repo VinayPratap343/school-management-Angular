@@ -1,0 +1,47 @@
+<body>
+<nav class="navbar">
+    <div class="navbar-brand"> 
+      <a routerLink="/dashboard" routerLinkActive="active" ariaCurrentWhenActive="page">Hamlition School</a>
+    </div>
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a routerLink="/" routerLinkActive="active" ariaCurrentWhenActive="page" class="nav-link">Home</a>
+      </li>
+      <li class="nav-item">
+        <a routerLink="/my-dashboard" routerLinkActive="active" ariaCurrentWhenActive="page" class="nav-link">Dashboard</a>
+      </li>
+
+      <li class="nav-item">
+        <a href="/contact" class="nav-link">Contact</a>
+      </li>
+    </ul>
+  </nav>
+  <div class="dashboard-container">
+    <h2>Dashboard</h2>
+    <p class="welcome-message">vinay pratap{{ username }} singh</p>
+  
+    <div class="stats-cards">
+      <div class="card">
+        <h3>Profile</h3>
+        <p>View your profile information.</p>
+      </div>
+      <div class="card">
+        <h3>Result</h3>
+        <p>Check your academic performance.</p>
+      </div>
+      <div class="card">
+        <h3>Sports</h3>
+        <p>View your your sports activity.</p>
+      </div>
+    </div>
+  
+    <div class="announcements">
+      <h3>Announcements</h3>
+      <ul>
+        <li>Upcoming sports touranament </li>
+        <li>Midterm exams next week</li>
+        <li>New courses available for registration</li>
+      </ul>
+    </div>
+  </div>
+</body>

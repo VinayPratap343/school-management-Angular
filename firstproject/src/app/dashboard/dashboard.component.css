@@ -1,0 +1,384 @@
+/* General styling */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+  background-image: url('PIC2.webp');
+  background-size: cover;
+  background-position: center;
+
+}
+
+/* Navbar styling */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgba(51, 51, 51, 0.8); /* Transparent background with opacity */
+  padding: 10px 20px;
+  border-radius: 5px 5px 0 0;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  position: relative;
+  z-index: 10;
+}
+
+.navbar-brand a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.5em;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.navbar-brand a:hover {
+  color: #ff9800; /* Hover color */
+}
+
+.navbar-nav {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar-nav .nav-item {
+  margin-left: 20px;
+  position: relative;
+}
+
+.navbar-nav .nav-link {
+  color: #fff;
+  text-decoration: none;
+  padding: 8px 15px;
+  border-radius: 4px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.navbar-nav .nav-link:hover {
+  background-color: rgba(85, 85, 85, 0.8); /* Hover background with opacity */
+  color: #ff9800; /* Hover color */
+}
+
+.navbar-nav .nav-link::after {
+  content: "";
+  display: block;
+  width: 0;
+  height: 2px;
+  background: #ff9800;
+  transition: width 0.3s;
+}
+
+.navbar-nav .nav-link:hover::after {
+  width: 100%;
+  transition: width 0.3s;
+}
+
+/* Active link styling */
+.active {
+  font-weight: bold;
+  color: #ff9800 !important;
+}
+
+.active::after {
+  width: 100%;
+}
+
+/* Dashboard container */
+.dashboard-container {
+  max-width: 1200px;
+  margin: 5rem auto;
+  padding: 20px;
+  background-color: rgba(5, 5, 5, 0.8); /* Transparent background with opacity */
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  opacity: 0.9;
+}
+
+.dashboard-container h2 {
+  font-size: 2.5em;
+  color: #f6f6f6;
+  margin-bottom: 20px;
+}
+
+.welcome-message {
+  font-size: 1.2em;
+  color: #ffffff;
+  margin-bottom: 20px;
+}
+
+.stats-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-gap: 20px;
+}
+
+.card {
+  background-color: #f9f9f9;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.card h3 {
+  font-size: 1.5em;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.card p {
+  color: #666;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.announcements {
+  margin-top: 40px;
+}
+
+.announcements h3 {
+  font-size: 1.8em;
+  color: #f7f7f7;
+  margin-bottom: 20px;
+}
+
+.announcements ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.announcements ul li {
+  font-size: 1.2em;
+  color: #e3dede;
+  margin-bottom: 10px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1200px) {
+  .dashboard-container {
+    padding: 15px;
+  }
+
+  .stats-cards {
+    grid-gap: 15px;
+  }
+
+  .card {
+    padding: 15px;
+  }
+}
+
+@media (max-width: 992px) {
+  .stats-cards {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  }
+}
+
+@media (max-width: 768px) {
+  .dashboard-container {
+    padding: 10px;
+  }
+
+  .stats-cards {
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    grid-gap: 10px;
+  }
+
+  .card {
+    padding: 15px;
+  }
+}
+
+@media (max-width: 576px) {
+  .dashboard-container h2 {
+    font-size: 2em;
+  }
+
+  .welcome-message {
+    font-size: 1em;
+  }
+
+  .card h3 {
+    font-size: 1.3em;
+  }
+
+  .card p {
+    font-size: 0.9em;
+  }
+
+  .announcements h3 {
+    font-size: 1.5em;
+  }
+
+  .announcements ul li {
+    font-size: 1em;
+  }
+}
+
+/* Custom Button Styling */
+.button {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #333;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.button:hover {
+  background-color: #2a64bb;
+  transform: translateY(-2px);
+}
+
+.button:active {
+  background-color: #1e4a8a;
+  transform: translateY(0);
+}
+
+/* Animated Progress Bar */
+.progress-bar {
+  width: 100%;
+  height: 20px;
+  background-color: #f0f0f0;
+  border-radius: 10px;
+  overflow: hidden;
+  margin-bottom: 15px;
+}
+
+.progress-bar-inner {
+  height: 100%;
+  background-color: #2a64bb;
+  animation: progress-animation 2s ease-in-out forwards;
+}
+
+@keyframes progress-animation {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 100%;
+  }
+}
+
+/* Interactive Checkbox/Radio Button Styles */
+.checkbox-container {
+  display: inline-block;
+  position: relative;
+  padding-left: 30px;
+  margin-bottom: 15px;
+  cursor: pointer;
+  font-size: 1.2em;
+  color: #333;
+}
+
+.checkbox-container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+.checkbox-checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 20px;
+  width: 20px;
+  background-color: #eee;
+  border-radius: 3px;
+}
+
+.checkbox-container:hover input ~ .checkbox-checkmark {
+  background-color: #ccc;
+}
+
+.checkbox-container input:checked ~ .checkbox-checkmark {
+  background-color: #2a64bb;
+}
+
+.checkbox-checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+.checkbox-container input:checked ~ .checkbox-checkmark:after {
+  display: block;
+}
+
+.checkbox-container .checkbox-checkmark:after {
+  left: 7px;
+  top: 3px;
+  width: 5px;
+  height: 10px;
+  border: solid #fff;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+}
+
+/* Custom Radio Button */
+.radio-container {
+  display: inline-block;
+  position: relative;
+  padding-left: 30px;
+  margin-bottom: 15px;
+  cursor: pointer;
+  font-size: 1.2em;
+  color: #333;
+}
+
+.radio-container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+.radio-checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  border: 2px solid #ccc;
+}
+
+.radio-container:hover input ~ .radio-checkmark {
+  border-color: #999;
+}
+
+.radio-container input:checked ~ .radio-checkmark {
+  background-color: #2a64bb;
+  border-color: #2a64bb;
+}
+
+/* Custom Toggle Switch */
+.toggle-container {
+  display: inline-block;
+  position: relative;
+  width: 60px;
+  height: 34px;
+  margin-bottom: 15px;
+}
+
+.toggle-container input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.toggle-slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right:0;
+}
